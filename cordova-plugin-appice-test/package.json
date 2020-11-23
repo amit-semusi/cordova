@@ -1,0 +1,62 @@
+{
+  "_from": "cordova-plugin-appice-test",
+  "_id": "cordova-plugin-appice-test@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-9JmGvw4qa036u+6V4FHFfKhLnO8/127ovQRwUAjPzkca4jmgpgADKVwSMN93Lb1BF3PYOjNj3MUxMUeDNwjEOw==",
+  "_location": "/cordova-plugin-appice-test",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-appice-test",
+    "name": "cordova-plugin-appice-test",
+    "escapedName": "cordova-plugin-appice-test",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-appice-test/-/cordova-plugin-appice-test-1.0.1.tgz",
+  "_shasum": "7ffe70ff26a31953afb861e0becf2d75afc9d8bd",
+  "_spec": "cordova-plugin-appice-test",
+  "_where": "/Users/amitpandey/Desktop/testingCordova",
+  "author": {
+    "name": "AppICE"
+  },
+  "bugs": {
+    "url": "https://github.com/AppICEIO/cordova-plugin-appice-test/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-appice-test",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "test for appice",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/AppICEIO/cordova-plugin-appice-test#readme",
+  "keywords": [
+    "AppICE",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "license": "Commercial",
+  "name": "cordova-plugin-appice-test",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AppICEIO/cordova-plugin-appice-test.git"
+  },
+  "version": "1.0.1"
+}

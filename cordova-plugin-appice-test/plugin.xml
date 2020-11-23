@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-appice-test" version="1.0.0" 
+xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+xmlns:android="http://schemas.android.com/apk/res/android">
+<name>AppICE</name>
+
+
+
+<js-module name="AppICE" 
+src="www/AppICE.js">
+<clobbers target="AppICE" />
+</js-module>
+  <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+
+  <preference name="APPICE_APP_ID" />
+    <preference name="APPICE_APP_KEY" />
+    <preference name="APPICE_API_KEY" />
+   
+   <platform name="android">
+        
+    	<config-file>
+    		<access origin="*.appice.io" />
+    	</config-file>
+    	
+    	<config-file target="config.xml" parent="/*">
+    		<feature name="AppICEPlugin">
+    			<param name="android-package" value="com.appice.cordova.AppICEPlugin" />
+    			<param name="onload" value="true" />
+    		</feature>
+    	</config-file>
+    	
+    	<config-file target="AndroidManifest.xml" parent="/manifest">
+    		<uses-permission android:name="android.permission.INTERNET"/>
+    		<permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE" 
+            android:protectionLevel="signature"/>
+      		<uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
+    	</config-file>
+    	
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<meta-data android:name="com.google.android.gms.version" 
+            android:value="@integer/google_play_services_version" />
+			<meta-data android:name="com.semusi.analytics.appid" android:value="$APPICE_APP_ID"/>
+        	<meta-data android:name="com.semusi.analytics.appkey" android:value="$APPICE_APP_KEY"/>
+        	<meta-data android:name="com.semusi.analytics.apikey" android:value="$APPICE_API_KEY"/>
+		</config-file>
+		
+		<source-file src="src/android/AppICEPlugin.java" target-dir="src/com/appice/cordova/" />
+		<source-file src="src/android/CampaignCampsReceiver.java" target-dir="src/com/appice/cordova/" />
+		<source-file src="src/android/NotificationEventService.java" target-dir="src/com/appice/cordova/" />
+		
+		<framework src="com.google.android.gms:play-services-gcm:16.0.0" />
+		<framework src="com.google.android.gms:play-services-ads:16.0.0" />
+		<framework src="com.google.android.gms:play-services-location:16.0.0" />
+		<framework src="com.android.support:support-v4:+" />
+		<framework src="appice.io.android:cordova:+" />
+	    <framework src="appice.io.android:sdk:+" />
+    	
+    	<hook type="after_plugin_install" src="scripts/androidAfterPluginAdd.js" />
+    	<hook type="before_plugin_uninstall" src="scripts/androidAfterPluginRm.js" />
+    </platform></plugin>
